@@ -14,22 +14,28 @@
 // //**the data that we attach too the scope object is the model
 
 var myApp = angular
-				.module('myModule', [])
+.module('myModule', [])
 				.controller("myController", function  ($scope) {    //method chaining compare up
-					var employee = {
-					firstName : "Sanket",
-					lastName : "Devlekar",
-					contact : 9664625124
-				};
-				var country = {
-					name : "India",
-					capital : "Delhi",
-					flag : "images/lalu.png"
 
-				};
-				$scope.message = "Angular Welcome";
-				$scope.employee = employee;
-				$scope.country = country;
+					var countries = [
+					{
+						name : "UK" ,
+						cities : [ 
+						{name: "London"},
+						{ name: "Birmingham" },
+						{name: "Manchester"}
+						]
+					},
+					{
+						name : "India" ,
+						cities : [
+						{name: "Delhi"},
+						{ name: "UP"},
+						{name: "Mumbai"}
+						]
+					}
+					];
+					$scope.countries = countries;
 
 
-			}); 
+				}); 

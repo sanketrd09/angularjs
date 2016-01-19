@@ -7,42 +7,18 @@
 </head>
 <body ng-controller="myController">
 	<div>
-		<input type="text" ng-model="message"/>
-		<br/>
-		<br/>
-		{{message}}
-		<table ng-model="employee">
-			<tr>
-				<td>First name:</td>
-				<td><input type="text" ng-model="employee.firstName"/></td>
-			</tr>
-			<tr>
-				<td>Last name:</td>
-				<td><input type="text" ng-model="employee.lastName"/></td>
-			</tr>
-			<tr>
-				<td>Contact:</td>
-				<td><input type="text" ng-model="employee.contact"/></td>
-			</tr>
-			
-		</table>
-		<br/>
-		<br/>
-		<table>
-			<tr>
-				<td>First name:</td>
-				<td>{{employee.firstName}}</td>
-			</tr>
-			<tr>
-				<td>Last name:</td>
-				<td>{{employee.lastName}}</td>
-			</tr>
-			<tr>
-				<td>Contact:</td>
-				<td>{{employee.contact}}</td>
-			</tr>
-			
-		</table>
+		<ul>
+			<li ng-repeat="country in countries"> <!-- alternatively can also use ng-init = "parentIndex=$index" -->
+				{{country.name}} -Index = {{$index}}
+				<ul>
+					<li ng-repeat="city in country.cities">
+					{{city.name}} - Parent Index = {{$parent.$index}} , -Index = {{$index}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+
 	</div>
 	
 	
