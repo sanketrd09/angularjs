@@ -6,16 +6,43 @@
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body ng-controller="myController">
-	<div> {{message}}</div> <!--  {{}} is the data binding expression -->
-	<div> {{10+30}}</div>
-	<div>firstName : {{empljoyee.firstName}}</div>
-	<div>contact : {{employee.contact}}</div>
-
-	<div>COuntry : {{country.name}} </div>
-	<div>Capital: {{country.capital}} </div>
-	<div><img 
-				ng-src= {{country.flag}} 
-				style= "height:200px; width:150px"/>
+	<div>
+		<input type="text" ng-model="message"/>
+		<br/>
+		<br/>
+		{{message}}
+		<table ng-model="employee">
+			<tr>
+				<td>First name:</td>
+				<td><input type="text" ng-model="employee.firstName"/></td>
+			</tr>
+			<tr>
+				<td>Last name:</td>
+				<td><input type="text" ng-model="employee.lastName"/></td>
+			</tr>
+			<tr>
+				<td>Contact:</td>
+				<td><input type="text" ng-model="employee.contact"/></td>
+			</tr>
+			
+		</table>
+		<br/>
+		<br/>
+		<table>
+			<tr>
+				<td>First name:</td>
+				<td>{{employee.firstName}}</td>
+			</tr>
+			<tr>
+				<td>Last name:</td>
+				<td>{{employee.lastName}}</td>
+			</tr>
+			<tr>
+				<td>Contact:</td>
+				<td>{{employee.contact}}</td>
+			</tr>
+			
+		</table>
 	</div>
 	
 	

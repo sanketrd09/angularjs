@@ -18,7 +18,7 @@ var myApp = angular
 				.controller("myController", function  ($scope) {    //method chaining compare up
 					var employee = {
 					firstName : "Sanket",
-					lastname : "Devlekar",
+					lastName : "Devlekar",
 					contact : 9664625124
 				};
 				var country = {
